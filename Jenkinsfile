@@ -6,6 +6,11 @@ def COLOR_MAP = [
 pipeline {
 	agent any
 
+        tools {
+                jdk 'JavaJDK17'
+                maven 'Maven3'
+        }
+
 	environment {
 		registry = 'iad.ocir.io/idlhjo6dp3bd/hello-oke-springboot'
 		registryCredential = 'CredencialRegistry'
